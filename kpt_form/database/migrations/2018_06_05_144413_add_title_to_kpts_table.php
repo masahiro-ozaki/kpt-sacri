@@ -13,9 +13,9 @@ class AddTitleToKptsTable extends Migration
      */
     public function up()
     {
-      //  Schema::table('kpts', function (Blueprint $table) {
-            // $table->string('title');
-    //    });
+        Schema::table('kpts', function (Blueprint $table) {
+             $table->string('title');
+       });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddTitleToKptsTable extends Migration
      */
     public function down()
     {
-       // Schema::table('kpts', function (Blueprint $table) {
-            // $table->dropColumn('title');
-    //    });
+        Schema::table('kpts', function (Blueprint $table) {
+             $table->dropColumn('title');
+        });
     }
 }

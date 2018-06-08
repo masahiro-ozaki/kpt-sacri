@@ -14,7 +14,7 @@ class AddTitleToKptsTable extends Migration
     public function up()
     {
         Schema::table('kpts', function (Blueprint $table) {
-            $table->string('title');
+            $table->string('title')->nullable();
         });
     }
 

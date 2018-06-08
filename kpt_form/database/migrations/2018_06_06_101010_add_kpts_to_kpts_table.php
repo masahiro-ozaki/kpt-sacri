@@ -18,9 +18,9 @@ class AddKptsToKptsTable extends Migration
             $table->string('keep');
             $table->string('problem');
             $table->string('Try');
-            $table->string('MVP')->nullable();
-            $table->string('reason')->nullable();
-            $table->string('want')->nullable();
+            $table->string('MVP');
+            $table->string('reason');
+            $table->string('want');
         });
     }
 

@@ -15,7 +15,7 @@ class CreateKptFormTable extends Migration
     {
         Schema::create('kpts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('content')->nullable();
+            // $table->string('content');
             $table->timestamps();
         });
     }

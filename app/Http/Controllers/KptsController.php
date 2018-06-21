@@ -45,8 +45,6 @@ class KptsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'max:191', 
-            'content' => 'max:191',
             'dates' => 'required|max:191',
             'keep' => 'required|max:191',
             'problem' => 'required|max:191',
@@ -57,8 +55,6 @@ class KptsController extends Controller
         ]);
         
         $kpt = new Kpt;
-        $kpt->title = $request->title;
-        $kpt->content = $request->content;
         $kpt->dates = $request->dates;
         $kpt->keep = $request->keep;
         $kpt->problem = $request->problem;
@@ -111,8 +107,6 @@ class KptsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'max:191',
-            'content' => 'max:191',
             'dates' => 'required|max:191',
             'keep' => 'required|max:191',
             'problem' => 'required|max:191',
@@ -123,8 +117,6 @@ class KptsController extends Controller
         ]);
         
         $kpt = Kpt::find($id);
-        $kpt->title = $request->title;
-        $kpt->content = $request->content;
         $kpt->dates = $request->dates;
         $kpt->keep = $request->keep;
         $kpt->problem = $request->problem;

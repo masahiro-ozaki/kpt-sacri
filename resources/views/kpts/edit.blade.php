@@ -10,7 +10,7 @@
     
     <h1>{{ $kpt->dates }} の編集ページ</h1>    
     
-    {!! Form::model($kpt, ['route' => 'kpts.store']) !!}
+    {!! Form::model($kpt, ['route' => ['kpts.update', $kpt->id], 'method' => 'put']) !!}
         
         <div class="form-group">
         {!! Form::label('dates', 'Date:') !!}

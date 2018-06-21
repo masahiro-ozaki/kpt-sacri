@@ -50,6 +50,16 @@
         {!! Form::label('want', 'Want:') !!}
         {!! Form::textarea('want', null, ['class' => 'form-control']) !!}
         </div>
+        
+        <div class="form-group">
+        {!! Form::label('content', 'Content:') !!}
+        {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
+        </div>
+        
+        <div class="form-group">
+        {!! Form::label('title', 'Title:') !!}
+        {!! Form::textarea('title', null, ['class' => 'form-control']) !!}
+        </div>
 
         <!--button-->
         {{ Form::button('<span class="glyphicon glyphicon-send"> 投稿</span>', array('class'=>'btn btn-info', 'type'=>'submit')) }}

@@ -78,12 +78,18 @@
 <br>
 <h3 class='contents'>Copy&Paste</h3>
 <div class='panel panel-info'>
-        <h3><b>Keep</b></h3><p> {!! nl2br($kpt->keep) !!}</p>
-        <h3><b>Problem</b></h3><p> {!! nl2br($kpt->problem) !!}</p>
-        <h3><b>Try</b></h3><p>{!! nl2br($kpt->Try) !!}</p>
-        <h3><b>MVP</b></h3><p>{!! nl2br($kpt->MVP) !!}</p>
-        <h3><b>Reason</b></h3><p>{!! nl2br($kpt->reason) !!}</p>
-        <h3><b>Want</b></h3><p>{!! nl2br($kpt->want) !!}</p>
+        <h3><b>Keep</b></h3>
+            <br> {!! nl2br($kpt->keep) !!} <br>
+        <h3><b>Problem</b></h3>
+            <br> {!! nl2br($kpt->problem) !!} <br>
+        <h3><b>Try</b></h3>
+            <br> {!! nl2br($kpt->Try) !!} <br>
+        <h3><b>MVP</b></h3>
+            <br> {!! nl2br($kpt->MVP) !!} <br>
+        <h3><b>Reason</b></h3>
+            <br> {!! nl2br($kpt->reason) !!} <br>
+        <h3><b>Want</b></h3>
+            <br> {!! nl2br($kpt->want) !!} <br>
 </div>
 </div>
 </div>

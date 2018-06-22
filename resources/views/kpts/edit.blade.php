@@ -20,17 +20,17 @@
         
         <div class="form-group">
         {!! Form::label('keep', 'Keep:') !!}
-        {!! Form::textarea('keep', null, ['class' => 'form-control' , 'rows'=>'4']) !!}
+        {!! Form::textarea('keep', null, ['class' => 'form-control' , 'rows'=>'3']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('problem', 'Problem:') !!}
-        {!! Form::textarea('problem', null, ['class' => 'form-control' , 'rows'=>'4']) !!}
+        {!! Form::textarea('problem', null, ['class' => 'form-control' , 'rows'=>'3']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('Try', 'Try:') !!}
-        {!! Form::textarea('Try', null, ['class' => 'form-control' , 'rows'=>'4']) !!}
+        {!! Form::textarea('Try', null, ['class' => 'form-control' , 'rows'=>'3']) !!}
         </div>
         
         <div class="form-group">

@@ -16,7 +16,7 @@
     padding: 0;
 }
 
-.panel{
+.scroll{
     overflow-y:scroll;
 }
     
@@ -27,55 +27,56 @@
 
 @section('content')
     
-    
+ <div class="row">
+    <!--grid-->
+    <div class="col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
 
 <h1 class='contents'>{{ $kpt->dates }}&nbsp;&nbsp;&nbsp; Contents&nbsp;</h1>
            
         <div class='box16'>
             
             <h3><b>Keep</b></h3>
-            <div class='panel panel-info' style="height: 20vh;">
-                <h4>{!! nl2br($kpt->keep) !!}</h4>
+            <div class='panel panel-info scroll' style="height: 10vh;">
+                <p>{!! nl2br($kpt->keep) !!}</p>
             </div>
             
             <h3><b>Problem</b></h3>
-            <div class='panel panel-info' style="height: 20vh;">
-                <h4>{!! nl2br($kpt->problem) !!}</h4>
+            <div class='panel panel-info scroll' style="height: 10vh;">
+                <p>{!! nl2br($kpt->problem) !!}</p>
             </div>
             
             <h3><b>Try</b></h3>
-            <div class='panel panel-info' style="height: 20vh;">
-                <h4>{!! nl2br($kpt->try) !!}</h4>
+            <div class='panel panel-info scroll' style="height: 10vh;">
+                <p>{!! nl2br($kpt->Try) !!}</p>
             </div>
             
             <h3><b>MVP</b></h3>
-            <div class='panel panel-info' style="height: 20vh;">
+            <div class='panel panel-info' style="height: 5vh;">
                 <h4>{!! nl2br($kpt->MVP) !!}</h4>
             </div>
             
             <h3><b>Reason</b></h3>
-            <div class='panel panel-info' style="height: 20vh;">
-                <h4>{!! nl2br($kpt->reason) !!}</h4>
+            <div class='panel panel-info scroll' style="height: 5vh;">
+                <p>{!! nl2br($kpt->reason) !!}</p>
             </div>
             
             <h3><b>Want</b></h3>
-            <div class='panel panel-info' style="height: 20vh;">
-                <h4>{!! nl2br($kpt->want) !!}</h4>
+            <div class='panel panel-info scroll' style="height: 5vh;">
+                <p>{!! nl2br($kpt->want) !!}</p>
             </div>
         </div>
 <div class='btn-toolbar'>
     
     <!--先にゴミ箱を右に寄せる-->
-
+        {!! link_to_route('kpts.edit', ' Edit', ['id' => $kpt->id], ['class' => 'btn btn-info btn-lg glyphicon glyphicon-apple']) !!}
+        
         {!! Form::model($kpt, ['route' => ['kpts.destroy', $kpt->id], 'method' => 'delete'])!!}
-            {{ Form::button('<span class="glyphicon glyphicon-trash"></span>', array('class'=>'btn btn-default btn-lg pull-right', 'type'=>'submit')) }}
+            {!! Form::button('<span class="glyphicon glyphicon-trash"></span>', array('class'=>'btn btn-default btn-lg pull-right', 'type'=>'submit')) !!}
         {!! Form::close() !!}
     
-        {!! link_to_route('kpts.edit', ' Edit', ['id' => $kpt->id], ['class' => 'btn btn-info btn-lg glyphicon glyphicon-apple']) !!}
-</div>
 <!--コピペ用-->
 <br>
-<h3>Copy&Paste</h3>
+<h3 class='contents'>Copy&Paste</h3>
 <div class='panel panel-info'>
         <h3><b>Keep</b></h3><p> {!! nl2br($kpt->keep) !!}</p>
         <h3><b>Problem</b></h3><p> {!! nl2br($kpt->problem) !!}</p>
@@ -84,6 +85,7 @@
         <h3><b>Reason</b></h3><p>{!! nl2br($kpt->reason) !!}</p>
         <h3><b>Want</b></h3><p>{!! nl2br($kpt->want) !!}</p>
 </div>
-
+</div>
+</div>
     
 @endsection

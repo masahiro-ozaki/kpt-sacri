@@ -20,17 +20,17 @@
         
         <div class="form-group">
         {!! Form::label('keep', 'Keep:') !!}
-        {!! Form::textarea('keep', null, ['class' => 'form-control' , 'placeholder' =>'よかったこと' , 'rows'=>'4' ,  'required']) !!}
+        {!! Form::textarea('keep', null, ['class' => 'form-control' , 'placeholder' =>'よかったこと' , 'rows'=>'3' ,  'required']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('problem', 'Problem:') !!}
-        {!! Form::textarea('problem', null, ['class' => 'form-control' , 'placeholder' =>'わるかったこと' , 'rows'=>'4' ,  'required']) !!}
+        {!! Form::textarea('problem', null, ['class' => 'form-control' , 'placeholder' =>'わるかったこと' , 'rows'=>'3' ,  'required']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('Try', 'Try:') !!}
-        {!! Form::textarea('Try', null, ['class' => 'form-control' , 'placeholder' =>'あしたがんばること' , 'rows'=>'4' ,  'required']) !!}
+        {!! Form::textarea('Try', null, ['class' => 'form-control' , 'placeholder' =>'あしたがんばること' , 'rows'=>'3' ,  'required']) !!}
         </div>
         
         <div class="form-group">

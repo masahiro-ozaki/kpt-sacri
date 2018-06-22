@@ -23,32 +23,34 @@
         
         <div class="form-group">
         {!! Form::label('keep', 'Keep:') !!}
-        {!! Form::textarea('keep', null, ['class' => 'form-control']) !!}
+        {!! Form::textarea('keep', null, ['class' => 'form-control' , 'placeholder' =>'よかったこと']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('problem', 'Problem:') !!}
-        {!! Form::textarea('problem', null, ['class' => 'form-control']) !!}
+        {!! Form::textarea('problem', null, ['class' => 'form-control' , 'placeholder' =>'わるかったこと']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('Try', 'Try:') !!}
-        {!! Form::textarea('Try', null, ['class' => 'form-control']) !!}
+        {!! Form::textarea('Try', null, ['class' => 'form-control' , 'placeholder' =>'あしたがんばること']) !!}
         </div>
         
         <div class="form-group">
-        {!! Form::label('MVP', 'MVP:') !!}
-        {!! Form::textarea('MVP', null, ['class' => 'form-control']) !!}
+         {{ Form::label('MVP','MVP: ',array('class'=>'control-label')) }}
+             <div class="controls">
+             {{ Form::select('MVP',array(''=>'選択してください','Eriko'=>'Eriko','JET'=>'Jet','Nanashim'=>'Nana','Taisei'=>'Taisei','Yuka'=>'Yuka','Yuki'=>'Yuki')) }}
+             </div>
         </div>
-        
+
         <div class="form-group">
         {!! Form::label('reason', 'Reason:') !!}
-        {!! Form::textarea('reason', null, ['class' => 'form-control']) !!}
+        {!! Form::textarea('reason', null, ['class' => 'form-control' , 'placeholder' =>'それはなんで？']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('want', 'Want:') !!}
-        {!! Form::textarea('want', null, ['class' => 'form-control']) !!}
+        {!! Form::textarea('want', null, ['class' => 'form-control' , 'placeholder' =>'してほしいこと']) !!}
         </div>
         
 

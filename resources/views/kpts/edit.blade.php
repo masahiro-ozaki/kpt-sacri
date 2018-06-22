@@ -34,8 +34,10 @@
         </div>
         
         <div class="form-group">
-        {!! Form::label('MVP', 'MVP:') !!}
-        {!! Form::textarea('MVP', null, ['class' => 'form-control']) !!}
+         {{ Form::label('MVP','MVP',array('class'=>'control-label')) }}
+             <div class="controls">
+             {{ Form::select('MVP',array(''=>'選択してください','Eriko'=>'Eriko','JET'=>'Jet','Nanashim'=>'Nana','Taisei'=>'Taisei','Yuka'=>'Yuka','Yuki'=>'Yuki')) }}
+             </div>
         </div>
         
         <div class="form-group">

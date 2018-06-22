@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
 
-            <h1>KPT form</h1>
+            <h1><span style="font : normal 30pt 'Monotype Corsiva'">KPT-form</span></h1>
         
             @if (count($kpts) > 0)
             <table class="table table-striped table-hover">
@@ -31,6 +31,7 @@
                         <tr>
                             <th>id</th>
                             <th>dates</th>
+                            <th>updated at</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,6 +39,7 @@
                             <tr>
                                 <td>{!! link_to_route('kpts.show', $kpt->id, ['id' => $kpt->id]) !!}</td>
                                 <td>{!! link_to_route('kpts.show', $kpt->dates, ['id' => $kpt->id]) !!}</td>
+                                <td>{!! $kpt->updated_at !!}</td>
                             </tr>
                         @endforeach
                     </tbody>

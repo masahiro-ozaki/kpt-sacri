@@ -8,11 +8,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">KPT form</a>
+                <a class="navbar-brand" href="/"><span style="font : normal 20pt 'Monotype Corsiva'">KPT-form</span></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>{!! link_to_route('kpts.create', 'KPTの入力') !!}</li>
+                    <li><a class="navbar-brand" href="/kpts/create"><span style="font : normal 20pt 'Monotype Corsiva'">Input</span></a></li>
                 </ul>
             </div>
         </div>

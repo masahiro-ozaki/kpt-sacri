@@ -4,14 +4,11 @@
 
 <!--CSS-->
 
-
-    
-        
     <div class="row">
     <!--grid-->
     <div class="col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
     
-    <h1>KPT新規作成ページ</h1>
+    <h1><span style="font : normal 30pt 'Monotype Corsiva'">KPT-form Input</span></h1>
         
     {!! Form::model($kpt, ['route' => 'kpts.store']) !!}
         
@@ -23,17 +20,17 @@
         
         <div class="form-group">
         {!! Form::label('keep', 'Keep:') !!}
-        {!! Form::textarea('keep', null, ['class' => 'form-control' , 'placeholder' =>'よかったこと']) !!}
+        {!! Form::textarea('keep', null, ['class' => 'form-control' , 'placeholder' =>'よかったこと' , 'rows'=>'4' ,  'required']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('problem', 'Problem:') !!}
-        {!! Form::textarea('problem', null, ['class' => 'form-control' , 'placeholder' =>'わるかったこと']) !!}
+        {!! Form::textarea('problem', null, ['class' => 'form-control' , 'placeholder' =>'わるかったこと' , 'rows'=>'4' ,  'required']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('Try', 'Try:') !!}
-        {!! Form::textarea('Try', null, ['class' => 'form-control' , 'placeholder' =>'あしたがんばること']) !!}
+        {!! Form::textarea('Try', null, ['class' => 'form-control' , 'placeholder' =>'あしたがんばること' , 'rows'=>'4' ,  'required']) !!}
         </div>
         
         <div class="form-group">
@@ -45,12 +42,12 @@
 
         <div class="form-group">
         {!! Form::label('reason', 'Reason:') !!}
-        {!! Form::textarea('reason', null, ['class' => 'form-control' , 'placeholder' =>'それはなんで？']) !!}
+        {!! Form::textarea('reason', null, ['class' => 'form-control' , 'placeholder' =>'それはなんで？' , 'rows'=>'1']) !!}
         </div>
         
         <div class="form-group">
         {!! Form::label('want', 'Want:') !!}
-        {!! Form::textarea('want', null, ['class' => 'form-control' , 'placeholder' =>'してほしいこと']) !!}
+        {!! Form::textarea('want', null, ['class' => 'form-control' , 'placeholder' =>'してほしいこと' , 'rows'=>'1']) !!}
         </div>
         
 

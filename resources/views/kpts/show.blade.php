@@ -29,11 +29,15 @@
     
  <div class="row">
     <!--grid-->
-    <div class="col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
 
 <h1 class='contents'>{{ $kpt->dates }}&nbsp;&nbsp;&nbsp; Contents&nbsp;</h1>
            
         <div class='box16'>
+            <h3><b>Writer</b></h3>
+            <div class='panel panel-info' style="height: 5vh;">
+                <h4>{!! nl2br($kpt->writer) !!}</h4>
+            </div>
             
             <h3><b>Keep</b></h3>
             <div class='panel panel-info scroll' style="height: 10vh;">
@@ -77,7 +81,7 @@
 <!--コピペ用-->
 <br>
 <h3 class='contents'>Copy&Paste</h3>
-<div class='panel panel-info'>
+<div class='panel panel-info scroll'>
         <h3><b>Keep</b></h3>
             <br> {!! nl2br($kpt->keep) !!} <br>
         <h3><b>Problem</b></h3>

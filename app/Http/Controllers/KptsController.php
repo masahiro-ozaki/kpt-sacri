@@ -46,6 +46,7 @@ class KptsController extends Controller
     {
         $this->validate($request, [
             'dates' => 'required|max:191',
+            'writer' => 'required|max:191',
             'keep' => 'required|max:191',
             'problem' => 'required|max:191',
             'Try' => 'required|max:191',
@@ -56,6 +57,7 @@ class KptsController extends Controller
         
         $kpt = new Kpt;
         $kpt->dates = $request->dates;
+        $kpt->writer = $request->writer;
         $kpt->keep = $request->keep;
         $kpt->problem = $request->problem;
         $kpt->Try = $request->Try;
@@ -108,6 +110,7 @@ class KptsController extends Controller
     {
         $this->validate($request, [
             'dates' => 'required|max:191',
+            'writer' => 'required|max:191',
             'keep' => 'required|max:191',
             'problem' => 'required|max:191',
             'Try' => 'required|max:191',
@@ -118,6 +121,7 @@ class KptsController extends Controller
         
         $kpt = Kpt::find($id);
         $kpt->dates = $request->dates;
+        $kpt->writer = $request->writer;
         $kpt->keep = $request->keep;
         $kpt->problem = $request->problem;
         $kpt->Try = $request->Try;

@@ -6,7 +6,7 @@
 
     <div class="row">
     <!--grid-->
-    <div class="col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
     
     <h1><span style="font : normal 30pt 'Monotype Corsiva'">{{ $kpt->dates }} Edit</span></h1>    
     
@@ -17,6 +17,12 @@
         {!! Form::date('dates', \Carbon\Carbon::now()) !!}
         </div>
         
+        <div class="form-group">
+         {{ Form::label('writer','Writer: ',array('class'=>'control-label')) }}
+             <div class="controls">
+             {{ Form::select('writer',array(''=>'選択してください','Eriko'=>'Eriko','JET'=>'Jet','Nanashim'=>'Nana','Taisei'=>'Taisei','Yuka'=>'Yuka','Yuki'=>'Yuki')) }}
+             </div>
+        </div>
         
         <div class="form-group">
         {!! Form::label('keep', 'Keep:') !!}

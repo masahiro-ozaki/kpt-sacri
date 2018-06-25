@@ -66,7 +66,7 @@ class KptsController extends Controller
         $kpt->want = $request->want;
         $kpt->save();
 
-        return redirect('/');
+        return redirect('/resources/views/kpts/index');
     }
 
     /**
@@ -130,7 +130,7 @@ class KptsController extends Controller
         $kpt->want = $request->want;
         $kpt->save();
 
-        return redirect('/');
+        return redirect('/resources/views/kpts/index');
     }
 
     /**
@@ -144,6 +144,6 @@ class KptsController extends Controller
         $kpt = Kpt::find($id);
         $kpt->delete();
 
-        return redirect('/');
+        return redirect('/resources/views/kpts/index');
     }
 }

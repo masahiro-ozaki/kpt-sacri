@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', 'KptsController@index');
+Route::get('/resources/views/kpts/index', 'KptsController@index');
 
 Route::resource('kpts', 'KptsController');

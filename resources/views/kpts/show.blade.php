@@ -27,7 +27,7 @@
 
 @section('content')
     
- <div class="row">
+<div class="row">
     <!--grid-->
     <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
 
@@ -69,14 +69,7 @@
                 <p>{!! nl2br($kpt->want) !!}</p>
             </div>
         </div>
-<div class='btn-toolbar'>
-    
-    <!--先にゴミ箱を右に寄せる-->
-        {!! link_to_route('kpts.edit', ' Edit', ['id' => $kpt->id], ['class' => 'btn btn-info btn-lg glyphicon glyphicon-apple']) !!}
-        
-        {!! Form::model($kpt, ['route' => ['kpts.destroy', $kpt->id], 'method' => 'delete'])!!}
-            {!! Form::button('<span class="glyphicon glyphicon-trash"></span>', array('class'=>'btn btn-default btn-lg pull-right', 'type'=>'submit')) !!}
-        {!! Form::close() !!}
+
     
 <!--コピペ用-->
 <br>
@@ -95,7 +88,18 @@
         <h3><b>Want</b></h3>
             <br> {!! nl2br($kpt->want) !!} <br>
 </div>
-</div>
+
+        <div class='btn-toolbar'>
+            
+            <!--先にゴミ箱を右に寄せる-->
+                {!! link_to_route('kpts.edit', ' Edit', ['id' => $kpt->id], ['class' => 'btn btn-info btn-lg glyphicon glyphicon-apple']) !!}
+                
+                {!! Form::model($kpt, ['route' => ['kpts.destroy', $kpt->id], 'method' => 'delete'])!!}
+                    {!! Form::button('<span class="glyphicon glyphicon-trash"></span>', array('class'=>'btn btn-default btn-lg pull-right', 'type'=>'submit')) !!}
+                {!! Form::close() !!}
+        
+        </div>
+    </div>
 </div>
     
 @endsection

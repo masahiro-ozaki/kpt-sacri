@@ -11,6 +11,22 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/resources/views/lessons/html', function () {
+    return view('/lessons/html');
+});
+
+Route::get('/resources/views/lessons/css', function () {
+    return view('/lessons/css');
+});
+
+Route::get('/resources/views/lessons/php', function () {
+    return view('/lessons/php');
+});
+
 Route::get('/resources/views/kpts/index', 'KptsController@index');
 
 Route::resource('kpts', 'KptsController');

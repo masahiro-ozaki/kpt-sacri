@@ -12,30 +12,84 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         
-        <link rel="stylesheet" href="jet-kun_home.css">
+        <!--CSS-->
+        <style>
+            /*セピア*/
+            /*#main_visual  {*/
+            /*    -webkit-filter: sepia(100%);*/
+            /*    filter: sepia(100%);*/
+            /*    -webkit-transition: .3s ease-in-out;*/
+            /*    transition: .3s ease-in-out;*/
+            /*}*/
+            /*#main_visual:hover {*/
+            /*    -webkit-filter: sepia(0);*/
+            /*    filter: sepia(0);*/
+            /*}*/
+            figure {
+              position: relative;
+            }
+            figure::before {
+              position: absolute;
+              top: 0;
+              left: -75%;
+              z-index: 2;
+              display: block;
+              content: '';
+              width: 50%;
+              height: 100%;
+              background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+              background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+              -webkit-transform: skewX(-25deg);
+              transform: skewX(-25deg);
+            }
+            figure:hover::before {
+              -webkit-animation: shine .75s;
+              animation: shine .75s;
+            }
+            @-webkit-keyframes shine {
+              100% {
+                left: 125%;
+              }
+            }
+            @keyframes shine {
+              100% {
+                left: 125%;
+              }
+            }
+        </style>
+        
     </head>
+    
     <body>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10 col-lg-offset-1">
+        
         <!--ここからヘッダー-->
         <header>
-            <h1><a href="jet-kun_home.php"><img src="jet-kun_image/jet-kun_logo.png" alt="JET-kun"></a></h1>
+            <div class="pull-left"><a href="/"><img src="jet-kun_image/JETS3.jpg" alt="JET-kun" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></a></div>
             <nav id="KPT_form">
-                <ul>
-                     <li><a href="/resources/views/kpts/index">KPTフォーム</a></li>
+                <ul class="list-inline col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                     <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a href="/resources/views/kpts/index" class="btn btn-default btn-block list-inline-item">KPTフォーム</a></li>
                 </ul>
             </nav>
             <nav id="global_navi">
-                <ul>
-                    <li><a href="/resources/views/lessons/html">HTML</a></li>
-                    <li><a href="/resources/views/lessons/css">CSS</a></li>
-                    <li><a href="/resources/views/lessons/php">PHP</a></li><br>
-                    <li><a href="***.html">MySQL</a></li>
-                    <li><a href="***.html">Git/GitHub</a></li>
-                    <li><a href="***.html">MassageBoard</a></li><br>
-                    <li><a href="***.html">Bootstrap</a></li>
-                    <li><a href="***.html">Heroku</a></li>
-                    <li><a href="***.html">Twitter Clone</a></li>
-                    <li><a href="***.html">Mono-List</a></li>
+                <ul class="list-inline col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/html" class="btn btn-default btn-block list-inline-item">HTML</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/css" class="btn btn-default btn-block list-inline-item">CSS</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/php" class="btn btn-default btn-block list-inline-item">PHP</a></li><br>
+                    
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">MySQL</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Git/GitHub</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Laravel</a></li><br>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Bootstrap</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Heroku</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Others</a></li>
+                    
                     <!-- <li><a href="contact.html">お問い合わせ</a></li> -->
+                    
                 </ul>
             </nav>
         </header>
@@ -43,42 +97,44 @@
         <!--ここからメインビジュアル画像-->
         <figure>
             <div id="main_visual">
-                <img src="jet-kun_image/main5.png" alt="プログラミングっぽい画像">
+                <img src="jet-kun_image/main5.png" alt="プログラミングっぽい画像" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             </div>
-            <figcaption>
-                <h3></h3>
-                <p><b>　今日もがんばろーーー♪</b></p>
-            </figcaption>
+            
+            <!--<figcaption>-->
+            <!--    <h3></h3>-->
+            <!--    <p><b>　今日もがんばろーーー♪</b></p>-->
+            <!--</figcaption>-->
+            
         </figure>
         <!--メインビジュアル画像ここまで-->
         <!--ここからwrapperー-->
-        <div id="wrapper" class="clearfix">
+        <div id="wrapper" class="clearfix col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <!--ここからメイン -->
             <div id="main">
                 <section id="news">
-                    <h2>参考サイト</h2>
-                    <ul>
-                        <li>
-                            <span>＜プログラミング全般＞</span>
-                            <a href="https://qiita.com">Qiita プログラマーによるknowledge共有サイト</a>
-                        </li>
-                        <li>
-                            <span>＜プログラミング全般＞</span>
-                            <a href="https://ja.stackoverflow.com">Stack Overflow プログラミングのQ&Aサイト</a>
-                        </li>
-                        <li>
-                            <span>＜プログラミング全般＞</span>
-                            <a href="https://prog-8.com">Progate 環境構築不要でネットでプログラミングを勉強する 継続して学習するため</a>
-                        </li>
-                        <li>
-                            <span>＜プログラミング全般＞</span>
-                            <a href="https://dotinstall.com">ドット・インストール 環境構築からプログラミングまで動画で学べる無料サイト</a>
-                        </li>
-                        <li>
-                            <span>＜PHP関連＞</span>
-                            <a href="https://www.sejuku.net/blog/23753">クラス変数・クラスメソッドを使用する方法(static)</a>
-                        </li>
-                    </ul>
+                    <h3>参考サイト</h3>
+                    <table class="table table-striped">
+                        <tr>
+                            <td>＜プログラミング全般＞</td>
+                            <td><a href="https://qiita.com">Qiita プログラマーによるknowledge共有サイト</a></td>
+                        </tr>
+                        <tr>
+                            <td>＜プログラミング全般＞</td>
+                            <td><a href="https://ja.stackoverflow.com">Stack Overflow プログラミングのQ&Aサイト</a></td>
+                        </tr>
+                        <tr>
+                            <td>＜プログラミング全般＞</td>
+                            <td><a href="https://prog-8.com">Progate 環境構築不要でネットでプログラミングを勉強する 継続して学習するため</a></td>
+                        </tr>
+                        <tr>
+                            <td>＜プログラミング全般＞</td>
+                            <td><a href="https://dotinstall.com">ドット・インストール 環境構築からプログラミングまで動画で学べる無料サイト</a></td>
+                        </tr>
+                        <tr>
+                            <td>＜PHP関連＞</td>
+                            <td><a href="https://www.sejuku.net/blog/23753">クラス変数・クラスメソッドを使用する方法(static)</a></td>
+                        </tr>
+                    </table>
                 </section>
             </div>
             <!--ここまでメイン -->
@@ -93,23 +149,11 @@
         <!--wrapperここまで-->
         <!--ここからフッター-->
         <footer>
-            <div id="footer_navi">
-                <ul>
-                    <li><a href="kpt-php.php">KPTフォーム</a></li>
-                    <li><a href="HTML.php">HTML</a></li>
-                    <li><a href="JET_kun_css.php">CSS</a></a></li>
-                    <li><a href="jet-kun_php.php">PHP</a></li>
-                    <li><a href="***.html">MySQL</a></li>
-                    <li><a href="***.html">Git/GitHub</a></li>
-                    <li><a href="***.html">MassageBoard</a></li>
-                    <li><a href="***.html">Bootstrap</a></li>
-                    <li><a href="***.html">Heroku</a></li>
-                    <li><a href="***.html">Twitter Clone</a></li>
-                    <li><a href="***.html">Mono-List</a></li>
-                </ul>
-            </div>
-            <small>&copy; Team JETS</small>
+            <div class="text-center text-muted col-xs-12 col-sm-12 col-md-12 col-lg-12">© 2018 JETS.</div>
         </footer>
         <!--フッターここまで-->
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -18,6 +18,19 @@
                 <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span style="font : normal 20pt 'Monotype Corsiva'" aria-hidden="true">
+                            Lessons</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/resources/views/lessons/html">HTML</a></li>
+                            <li><a href="/resources/views/lessons/css">CSS</a></li>
+                            <li><a href="/resources/views/lessons/php">PHP</a></li>
+                        </ul>
+                </li>
+                    
+                <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span style="font : normal 20pt 'Monotype Corsiva'" aria-hidden="true">
                             KPT-form</span>
                             <span class="caret"></span>
                         </a>

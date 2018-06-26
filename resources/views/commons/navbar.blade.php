@@ -25,6 +25,12 @@
                             <li><a href="/resources/views/lessons/html">HTML</a></li>
                             <li><a href="/resources/views/lessons/css">CSS</a></li>
                             <li><a href="/resources/views/lessons/php">PHP</a></li>
+                            <li><a href="/resources/views/lessons/mysql">MySQL</a></li>
+                            <li><a href="/resources/views/lessons/git">Git/GitHub</a></li>
+                            <li><a href="/resources/views/lessons/laravel">Laravel</a></li>
+                            <li><a href="/resources/views/lessons/bootstrap">Bootstrap</a></li>
+                            <li><a href="/resources/views/lessons/heroku">Heroku</a></li>
+                            <li><a href="/resources/views/lessons/others">Others</a></li>
                         </ul>
                 </li>
                     

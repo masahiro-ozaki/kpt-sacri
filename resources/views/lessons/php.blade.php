@@ -197,7 +197,7 @@ print htmlspecialchars('
 ?&gt;
                             </code>
                         </pre>
-                        <img src=jet-kun_image/whileloop.png><br>
+                        <img src=/jet-kun_image/whileloop.png><br>
                     <h4 id="for">for文</h4>
                     <p>for文は処理を繰り返し行うときに使用するループ文です。<br>
                     配列とオブジェクト以外にも他のデータ型(数値型や文字列型など)を構文で指定することができます。<br>
@@ -335,7 +335,6 @@ print htmlspecialchars('
         
         <aside id='sidebar'>
             <h1>目次</h1>
-            <h1><a href="jet-kun_home.php"><img src="jet-kun_image/jet-kun_logo.png" alt="JET-kun"></a></h1>
                 <ul>
                     <!-- 折り畳み展開ポインタ1 -->
                     <div onclick="obj=document.getElementById('open1').style; obj.display=(obj.display=='none')?'block':'none';">

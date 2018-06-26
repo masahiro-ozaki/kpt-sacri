@@ -145,7 +145,7 @@
                     <p>If you want to pick up the lower hierarchy's file, follow the instruction bellow.</p>
                     
                 <!--techacademylesson3 12.1の二枚目の画像を挿入-->
-                    <img src="jet-kun_image/lowerfile.png" alt="Access to the lower hierarchy's file" title="lower file">
+                    <img src="/jet-kun_image/lowerfile.png" alt="Access to the lower hierarchy's file" title="lower file">
                     
                     <pre>
                     <code>
@@ -157,7 +157,7 @@
                     
                     <p>If you want to pick up the same hierarchy's file, follow the instruction bellow.</p>
                 <!--techacademylesson3 12.1の三枚目の画像を挿入-->
-                    <img src="jet-kun_image/samefile.png" alt="Access to the same hierarchy's file" title="same file">
+                    <img src="/jet-kun_image/samefile.png" alt="Access to the same hierarchy's file" title="same file">
                     
                     <pre>
                     <code>
@@ -181,7 +181,6 @@
     <!--sidebar-->
     <aside id="sidebar" class='clearfix'>
         <h1>目次</h1>
-            <h1><a href="jet-kun_home.php"><img src="jet-kun_image/jet-kun_logo.png" alt="JET-kun"></a></h1>
             <ul>
             <!-- 折り畳み展開ポインタ1 -->
                 <div onclick="obj=document.getElementById('open1').style; obj.display=(obj.display=='none')?'block':'none';">

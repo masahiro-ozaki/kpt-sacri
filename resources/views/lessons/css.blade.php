@@ -8,7 +8,6 @@
         <div id='wrapper' >
             <aside id='sidebar' class='clearfix'>
                 <h1>目次</h1>
-                <h1><a href="jet-kun_home.php"><img src="jet-kun_image/jet-kun_logo.png" alt="JET-kun"></a></h1>
                 <ul>
                     <!-- 折り畳み展開ポインタ1 -->
                     <div onclick="obj=document.getElementById('open1').style; obj.display=(obj.display=='none')?'block':'none';">

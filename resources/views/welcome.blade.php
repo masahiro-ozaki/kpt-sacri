@@ -56,6 +56,42 @@
                 left: 125%;
               }
             }
+            
+            a {
+                color: #333;
+            }
+            
+            a:visited {						/* 訪問済みの色指定 */
+                color: #333;		
+            }
+            
+            a:hover {						/* マウスポインタをのせたとき */
+                color: #333;
+                font-weight: 700;
+                text-decoration: none;		/* リンクのアンダーラインを消す */
+            }
+            
+            .btn-info{
+                transition: background-color .2s linear;
+            }
+            .btn-info:visited {
+                color: #fff;
+            }
+            .btn-info:hover {
+                color: #fff;
+            }
+            .btn-default{
+                background-color: #d62626;
+                color: #fff;
+                transition: background-color .2s linear;
+            }
+            .btn-default:visited {
+                color: #fff;
+            }
+            .btn-default:hover {
+                background-color: #fa9786;
+                color: #fff;
+            }
         </style>
         
     </head>
@@ -69,9 +105,25 @@
         <!--ここからヘッダー-->
         <header>
             <div class="pull-left"><a href="/"><img src="jet-kun_image/JETS3.jpg" alt="JET-kun" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></a></div>
+            <div class="alert alert-info col-xs-12 col-sm-12 col-md-12 col-lg-12" role="alert">
+                    今日は、<b>
+                        <?php 
+                            $timestamp = time() ;
+                            echo date( "Y/m/d" , $timestamp ) ;
+                        ?>
+                    </b>です。
+            	        <?php
+            	            function rand_message() {
+                            	$message = array("一日頑張りましょう！", "適度に休憩しましょうね。", "一つ一つこなしていきましょう！", "今日も三度の飯より PHP です。", "コーヒーの飲みすぎに注意！");
+                            	return $message[array_rand($message)];
+                            }
+             
+                            echo rand_message();
+            	        ?>
+            </div>
             <nav id="KPT_form">
                 <ul class="list-inline col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                     <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a href="/resources/views/kpts/index" class="btn btn-default btn-block list-inline-item">KPTフォーム</a></li>
+                     <li class="col-xs-offset-8 col-xs-4 col-sm-offset-8 col-sm-4 col-md-offset-8 col-md-4 col-lg-offset-8 col-lg-4"><a href="/resources/views/kpts/index" class="btn btn-info btn-block list-inline-item">KPT-form</a></li>
                 </ul>
             </nav>
             <nav id="global_navi">
@@ -81,12 +133,12 @@
                     <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/css" class="btn btn-default btn-block list-inline-item">CSS</a></li>
                     <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/php" class="btn btn-default btn-block list-inline-item">PHP</a></li><br>
                     
-                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">MySQL</a></li>
-                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Git/GitHub</a></li>
-                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Laravel</a></li><br>
-                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Bootstrap</a></li>
-                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Heroku</a></li>
-                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="***.html" class="btn btn-default btn-block list-inline-item">Others</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/mysql" class="btn btn-default btn-block list-inline-item">MySQL</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/git" class="btn btn-default btn-block list-inline-item">Git/GitHub</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/laravel" class="btn btn-default btn-block list-inline-item">Laravel</a></li><br>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/bootstrap" class="btn btn-default btn-block list-inline-item">Bootstrap</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/heroku" class="btn btn-default btn-block list-inline-item">Heroku</a></li>
+                    <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="/resources/views/lessons/others" class="btn btn-default btn-block list-inline-item">Others</a></li>
                     
                     <!-- <li><a href="contact.html">お問い合わせ</a></li> -->
                     
@@ -112,8 +164,12 @@
             <!--ここからメイン -->
             <div id="main">
                 <section id="news">
-                    <h3>参考サイト</h3>
-                    <table class="table table-striped">
+                    <br>
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a href="/">参考サイト</a></li>
+                    </ul>
+                    <br>
+                    <table class="table table-striped table-hover">
                         <tr>
                             <td>＜プログラミング全般＞</td>
                             <td><a href="https://qiita.com">Qiita プログラマーによるknowledge共有サイト</a></td>
@@ -124,7 +180,7 @@
                         </tr>
                         <tr>
                             <td>＜プログラミング全般＞</td>
-                            <td><a href="https://prog-8.com">Progate 環境構築不要でネットでプログラミングを勉強する 継続して学習するため</a></td>
+                            <td><a href="https://prog-8.com">Progate 環境構築不要でネットでプログラミングを勉強する</a></td>
                         </tr>
                         <tr>
                             <td>＜プログラミング全般＞</td>

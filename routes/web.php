@@ -27,6 +27,30 @@ Route::get('/resources/views/lessons/php', function () {
     return view('/lessons/php');
 });
 
+Route::get('/resources/views/lessons/mysql', function () {
+    return view('/lessons/mysql');
+});
+
+Route::get('/resources/views/lessons/git', function () {
+    return view('/lessons/git');
+});
+
+Route::get('/resources/views/lessons/laravel', function () {
+    return view('/lessons/laravel');
+});
+
+Route::get('/resources/views/lessons/bootstrap', function () {
+    return view('/lessons/bootstrap');
+});
+
+Route::get('/resources/views/lessons/heroku', function () {
+    return view('/lessons/heroku');
+});
+
+Route::get('/resources/views/lessons/others', function () {
+    return view('/lessons/others');
+});
+
 Route::get('/resources/views/kpts/index', 'KptsController@index');
 
 Route::resource('kpts', 'KptsController');
